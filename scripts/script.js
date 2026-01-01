@@ -4,7 +4,7 @@ var menuLinks = [
     { text: 'catalog', href: '/catalog' },
     { text: 'orders', href: '/orders' },
     { text: 'account', href: '/account' },
-];
+]
 
 const mainEl = document.querySelector('main')
 
@@ -22,6 +22,21 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 
 topMenuEl.classList.add('flex-around')
 
+// Part 2 changes
+
+const subMenuEl = document.getElementById('sub-menu')
+
+subMenuEl.style.height = '100%'
+
+subMenuEl.style.backgroundColor = 'var(--sub-manu-bg)'
+
+subMenuEl.classList.add('flex-around')
+
+subMenuEl.style.position = 'absolute'
+
+subMenuEl.style.top = '0'
+
+
 for (let link of menuLinks) {
     
     let anchor = document.createElement("a")
@@ -32,3 +47,4 @@ for (let link of menuLinks) {
 
     topMenuEl.appendChild(anchor)
 }
+
